@@ -1,0 +1,69 @@
+#include <iostream>
+#include <string>
+#include <queue>
+using namespace std;
+
+struct Queue
+{
+    int size;
+    int front;
+    int rear;
+    int *Q;
+};
+
+void create(struct Queue *q, int size)
+{
+    q->size = size;
+    q->front = q->rear = -1;
+    q->Q = new int[q->size];
+}
+
+void enqueue(struct Queue *q, int x)
+{
+    if (q->rear == q->size - 1)
+    {
+        cout << "Queue us full";
+    }
+    else
+    {
+        q->rear++;
+        q->Q[q->rear] = x;
+    }
+}
+
+void dequeue(struct Queue *q)
+{
+    if (q->front == q->rear)
+        cout << "Queue is empty";
+    else
+    {
+        q->front++;   
+    }
+}
+
+void display(struct Queue q)
+{
+    for (int i = q.front;i<=q.rear;i++)
+        cout << q.Q[i] << " ";
+    cout << endl;
+}
+
+
+int main()
+{
+    struct Queue q;
+    create(&q,5);
+    
+    enqueue(&q,10);
+    enqueue(&q,20);
+    enqueue(&q,30);
+    enqueue(&q,40);
+    enqueue(&q,50);
+    
+    display(q);
+    
+    dequeue(&q);
+    dequeue(&q);
+    
+    display(q);
+}
