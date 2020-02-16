@@ -11,7 +11,7 @@ struct Node
 void enqueue(int x)
 {
     struct Node *t;
-    t = new Node[x];
+    t = new Node[sizeof(struct Node)];
     if (t == NULL)
         cout<< "Queue is full" << endl;
     else
