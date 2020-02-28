@@ -23,3 +23,32 @@ int main()
 
     return 0;
 }
+
+//Another example
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+//We use static member functions only to work with static data members
+class Test
+{
+    static int a,b;
+public:
+    static void getdata()  // Static member function - are used to access static data members of the same class so we declare static data members in private
+    {
+        cout << "enter a and b" << endl;
+        cin >> a >> b;
+        cout << "a is " << a << endl;
+        cout << "b is " << b << endl;
+    }
+};
+int Test::a;
+int Test::b;
+
+int main()
+{
+   Test t1;
+   t1.getdata();
+
+    return 0;
+}
