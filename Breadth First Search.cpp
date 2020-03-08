@@ -30,7 +30,7 @@ void Graph::BFS(int s)
 {
     bool *visited = new bool[V];   //mark all nodes false i.e. not visited
     for (int i=0;i<V;i++)
-        visited[s] = false;
+        visited[i] = false;
         
     list<int> queue;
     
