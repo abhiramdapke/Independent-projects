@@ -5,3 +5,10 @@ This repository contains individual independent projects and programs successful
 
 # Instructions to execute the programs
 Use any online C++ compiler to run these codes. You can also use any IDE's like Eclipse, Visual Studio, Code::Blocks to run these.
+
+# Credits
+I would like to acknowledge some of the websites and courses from which I have taken reference. They are the following:
+1. Mastering Data Structures and Algorithms by Adbul Bari - Udemy
+2. GeeksforGeeks portal
+3. Hackerrank
+4. LeetCode
