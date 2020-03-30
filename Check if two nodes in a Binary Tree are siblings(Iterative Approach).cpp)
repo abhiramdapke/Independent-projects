@@ -1,0 +1,70 @@
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node *lchild;
+    struct Node *rchild;
+};
+
+struct Node * push(int data)
+{   
+    struct Node *t  = new Node;
+    t->data = data;
+    t->lchild = t->rchild = NULL;
+    //first = t;
+    return t;
+}
+
+bool checksiblings(struct Node *root,int x,int y)
+{
+    if (root == NULL)
+        return false;
+    
+    queue<Node*> q;
+    q.push(root);
+    
+    while (!q.empty())
+    {
+        struct Node *temp = q.front();
+        q.pop();
+        if (temp->lchild && temp->rchild)
+        {
+            if (temp->lchild->data == x && temp->rchild->data == y)
+                return true;
+            else if (temp->lchild->data == y && temp->rchild->data == x)
+                return true;
+        }
+        if (temp->lchild)
+            q.push(temp->lchild);
+        if (temp->rchild)   
+            q.push(temp->rchild);
+    }
+    
+    return false;
+}
+
+
+int main()
+{
+    struct Node *root = push(1);
+    root->lchild = push(2);
+    root->rchild = push(3);
+    root->lchild->lchild = push(4); 
+    root->rchild->lchild = push(5); 
+    root->rchild->rchild = push(6); 
+    root->lchild->lchild->rchild = push(7); 
+   
+   int x = 5;
+   int y = 2;
+   
+   if (checksiblings(root, x, y))
+    cout << "Yes" << endl;
+   else
+    cout << "No" << endl;
+
+    return 0;
+}
