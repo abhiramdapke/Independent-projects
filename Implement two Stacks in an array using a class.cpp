@@ -56,7 +56,7 @@ public:
         else
         {
             cout << "Stack 1 is empty" << endl;
-            return 0;
+            exit(1);
         }
     }
     
@@ -72,7 +72,7 @@ public:
         else
         {
             cout << "Stack 2 is empty" << endl;
-            return 0;
+            exit(1);
         }
     }
     
