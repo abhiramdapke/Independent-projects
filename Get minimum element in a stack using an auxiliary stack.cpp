@@ -5,7 +5,6 @@ using namespace std;
 class Stack
 {
    stack<int> s1;
-   stack<int> s2;
    int min;
 
 public:
@@ -66,15 +65,20 @@ int main()
     Stack s;
     s.push(29);
     s.push(23);
+    s.push(6);
+    
     s.getmin();
     // cout << endl;
     s.push(32);
-    s.push(6);
+    s.push(5);
+    s.pop();
     
     s.getmin();
     // cout << endl;
     s.pop();
     s.pop();
+    s.pop();
+    s.push(4);
     
     s.getmin();
 
