@@ -2,12 +2,14 @@
 
 using namespace std;
 
+//By default a max heap
+//In place heap creation - we don't need an extra array to put elements in a heap.
 //there should atleast be one element in a binary heap
 void insert(int arr[], int n)
 {
-    int i = n;
-    int temp = arr[i];
-    while (i>1 && temp>arr[i/2])  //check its parent
+    int i = n;          //last element
+    int temp = arr[i];  //take last ele into a temp var
+    while (i>1 && temp>arr[i/2])  //check its ancestors
     {
         arr[i] = arr[i/2];
         i = i/2;
