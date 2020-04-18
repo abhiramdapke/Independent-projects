@@ -4,7 +4,7 @@ using namespace std;
 
 //3 classes haivng same printinfo function.
 /*virtual function is used and defined in the base class which is overriden as a member function in the derived classes 
-when we want to invoke the constructor of the derived class rather than the base class.
+when we want to invoke the function of the derived class rather than the base class.
 The compiler determines this at run-time after declaring the virtual function.*/
 
 class base
