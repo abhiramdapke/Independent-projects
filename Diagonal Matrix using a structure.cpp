@@ -48,6 +48,8 @@ int main()
     set(&m,3,3,6);
     set(&m,4,4,9);
     
+    cout << get(m,2,2) << endl;
+    
     display(m);
     
     return 0;
