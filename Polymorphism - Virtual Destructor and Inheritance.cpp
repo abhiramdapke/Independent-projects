@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Deleting an object through pointer to base invokes undefined behavior unless the destructor in the base class is virtual.
 /*When we use a virtual destructor, we can call the destructor of the derived class B
 before invoking the destructor of the base class A which was not possible otherwise and 
 we would be left with non- deallocated memory in the derived class*/
