@@ -17,13 +17,13 @@ public:
 
 
 //Multilevel Inheritance(Extemded from single level Inheritance)
-class Bmw
+class Bmw : public Car
 {
 public:
     void style() {cout << "Style" << endl;}
 };
 
-class Lamborghini
+class Lamborghini : public Car
 {
 public:
     void cost() {cout << "cost" << endl;}
