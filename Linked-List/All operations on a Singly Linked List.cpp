@@ -70,6 +70,23 @@ void findmiddleelement()
     cout << p->next->data << endl;
 }
 
+void deletealternatenode()
+{
+    struct Node *p = first;
+    if (first == NULL)
+        return;
+    
+    struct Node *q = first->next;
+    while (p && q)
+    {
+        p->next = q->next;
+        delete q;
+        p = p->next;
+        if (p)
+            q = p->next;
+    }
+}
+
 bool searchinLL(int key)
 {
     struct Node *p = first;
