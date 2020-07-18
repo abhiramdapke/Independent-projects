@@ -26,5 +26,14 @@ int main()
         cout << v[i] << endl;
     }
     
+//     string S,T;
+//     cout << "enter  name";
+//     getline(cin, S);
+    
+//     stringstream X(S);
+//     while (getline(X,T,' '))
+//         cout << T << endl;
+//     return 0;
+    
     return 0;
 }
