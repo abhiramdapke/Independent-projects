@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-//Non duplicate letters in the string
+//Works for duplicate letters in the string
 int main()
 {
    char a[] = "decimal";
