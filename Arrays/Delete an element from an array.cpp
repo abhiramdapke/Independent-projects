@@ -23,8 +23,8 @@ void printarray(int arr[],int n)
 
 int main()
 {
-    static int arr[] = {1,2,3,4,5};
-    static int n = (sizeof(arr)/sizeof(arr[0]));
+    int arr[] = {1,2,3,4,5};
+    int n = (sizeof(arr)/sizeof(arr[0]));
     
     printarray(arr,n);
     cout << endl;
