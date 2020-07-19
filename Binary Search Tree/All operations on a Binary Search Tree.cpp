@@ -54,10 +54,10 @@ struct Node * rinsert(struct Node *t, int key)
         return p;
     }
     if (key < t->data)
-        t->left = rinsert(root->left, key);
+        t->left = rinsert(t->left, key);
     else if (key > t->data)
-        t->right = rinsert(root->right, key);
-    return p;
+        t->right = rinsert(t->right, key);
+    return t;
 }
 
 void inorder(struct Node *t)
@@ -158,7 +158,7 @@ void secondlargestutil(struct Node *p, int &c)
         cout <<"2nd largest element is " << p->data << endl;
         return;
     }
-    secondlargestutil(root->left, c);
+    secondlargestutil(p->left, c);
 }
 
 void secondlargestelement(struct Node *p)
