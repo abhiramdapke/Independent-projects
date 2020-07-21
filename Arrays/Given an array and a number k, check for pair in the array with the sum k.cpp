@@ -2,8 +2,6 @@
 #include <algorithm>
 using namespace std;
 
-//t1 is a child thread
-//a thread should be either joined or detached only once.
 void findpair(int arr[], int n, int k)
 {
     sort(arr, arr + n);
