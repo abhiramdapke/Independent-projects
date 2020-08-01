@@ -33,7 +33,7 @@ int main()
     
     cout << endl;
     
-    for (int i=0;i<n;i++)
+    for (int i=0;i<n+1;i++)
         cout << vec[i] << " ";
     
     return 0;
